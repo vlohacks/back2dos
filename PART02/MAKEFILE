@@ -1,0 +1,26 @@
+# MIDAS Sound System directory:
+
+MIDASDIR = c:\code\midas
+
+
+# Compilers and options:
+
+ASM = tasm
+ASMOPTS = -UT310 -ml -m9 -d__ASM16__ -i$(MIDASDIR)\src
+LINK = tlink
+LINKOPTS = -c
+
+
+all : dreamit.exe
+
+asmopts :
+	echo $(ASMOPTS) > asmopts
+
+dreamit.exe : dreamit.obj $(MIDASDIR)\mstartup.obj $(MIDASDIR)\midasasm.lib
+	$(LINK) $(LINKOPTS) $(MIDASDIR)\mstartup.obj dreamit.obj, dreamit, \
+	dreamit.map, $(MIDASDIR)\midasasm.lib
+
+dreamit.obj : dreamit.asm
+	$(ASM) $(ASMOPTS) dreamit.asm
+
+
