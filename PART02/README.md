@@ -27,6 +27,10 @@ The assembler code uses nearly the same function names like in the BASIC version
 
 P.S. There is a way to exit the program. You have to type the secret password just blindly while the program idles or plays the MOD. You can find out the password especially when reading the old BASIC code (yeah I kept it the same in the new version). Consider this BEFORE running the EXE :-)
 
+## FAQ
+Q: I get the following errror: MIDAS Error: File does not exist
+A: Make sure DREAMIT.MOD resides in the same directory as the EXE does
+
 ## FileZ
 * DREAMIT.ASM: The full source code featuring excellent documentation. 
 * DREAMIT.MOD: The tune
